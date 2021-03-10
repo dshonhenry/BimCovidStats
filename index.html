@@ -1,0 +1,46 @@
+<!--INDEX.HTML-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script><title>Stats at a Glance</title>
+</head>
+<body>
+  <h1>Stats at a Glance</h1>
+
+      <div id="stats">     
+          <div class="stat">
+            <p>Active Cases</p>
+            <p class="stat-value" id="active"></p>
+          </div>
+
+          <div class="stat">
+            <p>Total Cases</p>
+            <p class="stat-value" id="cases"></p>
+          </div>
+
+          <div class="stat">
+            <p>Vaccination Rate</p>
+            <p class="stat-value" id="vaccines"></p>
+          </div>
+
+          <div class="stat">
+            <p>Deaths</p>
+            <p class="stat-value" id="deaths"></p>
+          </div>
+      </div>
+  </div>
+
+  <div id="graphs">
+    <iframe class="xl" width="600" height="378" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkkg-vNFXaE5VjA4N4G2bLwLfQENhN3wtj4-AxlUfIh5NO1vobv8sqALAcbDPlOE3IkAHuPQK2CyyY/pubchart?oid=1209206142&amp;format=interactive"></iframe>
+    <iframe class="xl" width="600" height="378" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkkg-vNFXaE5VjA4N4G2bLwLfQENhN3wtj4-AxlUfIh5NO1vobv8sqALAcbDPlOE3IkAHuPQK2CyyY/pubchart?oid=1617570074&amp;format=interactive"></iframe>
+    <iframe class="mobile" width="343" height="257" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkkg-vNFXaE5VjA4N4G2bLwLfQENhN3wtj4-AxlUfIh5NO1vobv8sqALAcbDPlOE3IkAHuPQK2CyyY/pubchart?oid=17325547&amp;format=interactive"></iframe>  
+    <iframe class="mobile" width="343" height="257" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkkg-vNFXaE5VjA4N4G2bLwLfQENhN3wtj4-AxlUfIh5NO1vobv8sqALAcbDPlOE3IkAHuPQK2CyyY/pubchart?oid=1020566628&amp;format=interactive"></iframe>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
