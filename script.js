@@ -4,7 +4,7 @@ var key = "1yHk5gHZ2yuNyIuggGdiGrjHSXESWn7r-pcWFtJmiGug";
 async function getData() {
     var start = new Date(2021, 0, 26);
     var today = new Date();
-    var timeDif =  Math.floor((today.getTime() - start.getTime())/(1000*3600*24)) + 2;
+    var timeDif =  Math.floor((today.getTime() - start.getTime())/(1000*3600*24)) + 1;
     var url = `https://docs.google.com/spreadsheet/pub?key=${key}&range=B${timeDif}:K${timeDif}&output=csv`;
     var data = await fetch(url).then(response => response.text());
     if (data)
