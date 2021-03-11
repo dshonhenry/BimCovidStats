@@ -14,11 +14,6 @@ async function getData() {
         var url = `https://docs.google.com/spreadsheet/pub?key=${key}&range=B${timeDif}:K${timeDif}&output=csv`;
         data = await fetch(url).then(response => response.text());
         populate(data);
-        anime({
-            targets: '.stat',
-            scale: 1.0,
-            delay: anime.stagger(100)
-        })
     }
 }
 
@@ -28,6 +23,11 @@ async function populate(dataString){
     $('#cases').html(data[9].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     $('#vaccines').html(data[8]);
     $('#deaths').html(data[4]);
+    anime({
+        targets: '.stat',
+        scale: 1.0,
+        delay: anime.stagger(100)
+    })
 };
 
 window.addEventListener("load", getData);
