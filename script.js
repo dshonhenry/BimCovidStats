@@ -1,5 +1,5 @@
 var key = "1yHk5gHZ2yuNyIuggGdiGrjHSXESWn7r-pcWFtJmiGug";
-
+$('.stat').css('transform', 'scale(0)')
 
 async function getData() {
     var start = new Date(2021, 0, 26);
@@ -14,6 +14,11 @@ async function getData() {
         var url = `https://docs.google.com/spreadsheet/pub?key=${key}&range=B${timeDif}:K${timeDif}&output=csv`;
         data = await fetch(url).then(response => response.text());
         populate(data);
+        anime({
+            targets: '.stat',
+            scale: 1.0,
+            delay: anime.stagger(100)
+        })
     }
 }
 
