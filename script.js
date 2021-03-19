@@ -20,8 +20,8 @@ async function getData() {
 async function populate(dataString){
     var data = dataString.split(',');
     $('#active').html(data[2]);
-    $('#cases').html(data[9].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-    $('#vaccines').html(data[8]);
+    $('#cases').html(data[3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+    $('#vaccines').html(data[6]);
     $('#deaths').html(data[4]);
     anime({
         targets: '.stat',
